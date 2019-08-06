@@ -42,7 +42,7 @@
 	}
 	function next(){
 		var op_value =$("#selectMeanu").val();
-		var op_size = $("#selectMeanu option").size();
+		var op_size = $("#selectMeanu option").length;
 		if(op_value < op_size){
 			var new_op_value = op_value- (-1);
 			$.get("./md_java/"+ new_op_value +".md",function(data,status){
