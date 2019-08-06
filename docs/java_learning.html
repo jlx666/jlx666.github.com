@@ -3,16 +3,25 @@
 <script type="text/javascript" src="./js/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <body>
-<p>jlx</p>
+	<div>
+		<a href="#">back</a>
+		<a> 下拉框</a>
+	</div>
+	<div class="content">
+		<p id="content">sss</p>
 
-<p id="content">sss</p>
+	</div>
+	<div>
+		<a href="#">上一页</a>
+		<a href="#">下一页</a>
+	</div>
 <button onclick="test()">test</button>
 </body>
 
 <script type="text/javascript">
-	function test(){
+	function show_markdown(){
 		$.get("./md_java/test.md",function(data,status){
-			$("#content").html(marked("# Marked in the browser\n\nRendered by **marked**." + data));
+			$("#content").html(marked(data));
 		});
 	}
 </script>
