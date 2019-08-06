@@ -26,7 +26,7 @@
 	function show_markdown(){
 		var op_value = $("#selectMeanu").val();
 		//remove all options attr
-		$("#selectMeanu").find("option").removeAttr(selected);
+		$("#selectMeanu").find("option").removeAttr("selected");
 		$("#selectMeanu").find("option[value='" + op_value +"']").attr("selected","selected");
 		$.get("./md_java/"+ op_value +".md",function(data,status){
 			$("#content").html(marked(data));
