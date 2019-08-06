@@ -40,7 +40,7 @@
 	}
 	function next(){
 		var op_value =$("#selectMeanu").val();
-		op_value = op_value+1;
+		op_value = op_value- (-1);
 		$.get("./md_java/"+ op_value +".md",function(data,status){
 			$("#content").html(marked(data));
 		});
