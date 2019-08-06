@@ -25,6 +25,8 @@
 <script type="text/javascript">
 	function show_markdown(){
 		var op_value = $("#selectMeanu").val();
+		//remove all options attr
+		$("#selectMeanu").find("option[value='" + op_value +"']").attr("selected",true);
 		$.get("./md_java/"+ op_value +".md",function(data,status){
 			$("#content").html(marked(data));
 		});
@@ -36,8 +38,8 @@
 			$.get("./md_java/"+ new_op_value +".md",function(data,status){
 				$("#content").html(marked(data));
 			});
-			$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected","selected");
-			$("#selectMeanu").find("option[value='" + op_value +"']").removeAttr("selected");
+			$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected",true);
+			//$("#selectMeanu").find("option[value='" + op_value +"']").removeAttr("selected");
 		}
 	}
 	function next(){
@@ -48,8 +50,8 @@
 			$.get("./md_java/"+ new_op_value +".md",function(data,status){
 				$("#content").html(marked(data));
 			});
-			$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected","selected");
-			$("#selectMeanu").find("option[value='" + op_value +"']").removeAttr("selected");
+			$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected",true);
+			//$("#selectMeanu").find("option[value='" + op_value +"']").removeAttr("selected");
 		}
 	}
 </script>
