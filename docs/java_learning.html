@@ -8,6 +8,8 @@
 		<select id="selectMeanu" onchange="show_markdown()">
 			<option value="1">Java类型</option>
 			<option value="2">Java方法</option>
+			<option value="3">Java对象</option>
+			
 		</select>
 	</div>
 	<div class="content">
@@ -15,8 +17,8 @@
 
 	</div>
 	<div>
-		<a href="#">上一页</a>
-		<a href="#">下一页</a>
+		<a onclick="front()">上一页</a>
+		<a onclick="next()">下一页</a>
 	</div>
 </body>
 
@@ -24,6 +26,20 @@
 	function show_markdown(){
 		var op_value = $("#selectMeanu").val();
 		$.get("./md_java/"+ op_value +".md",function(data,status){
+			$("#content").html(marked(data));
+		});
+	}
+	function front(){
+		var op_value =$("#selectMeanu").val();
+		$.get("./md_java/"+ op_value-1 +".md",function(data,status){
+			$("#content").html(marked(data));
+		});
+		$("#selectMeanu").find("option[value='" + op_value-1 +"']").attr("selected","selected");
+
+	}
+	function next(){
+		var op_value =$("#selectMeanu").val();
+		$.get("./md_java/"+ op_value+1 +".md",function(data,status){
 			$("#content").html(marked(data));
 		});
 	}
