@@ -39,8 +39,8 @@
 			$.get("./md_java/"+ new_op_value +".md",function(data,status){
 				$("#content").html(marked(data));
 			});
-			$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected","selected");
 			$("#selectMeanu").find("option[value='" + op_value +"']").removeAttr("selected");
+			$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected","selected");
 		}
 	}
 	function next(){
@@ -51,8 +51,8 @@
 			$.get("./md_java/"+ new_op_value +".md",function(data,status){
 				$("#content").html(marked(data));
 			});
-			$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected","selected");
 			$("#selectMeanu").find("option[value='" + op_value +"']").removeAttr("selected");
+			$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected","selected");
 		}
 	}
 </script>
