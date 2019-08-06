@@ -13,7 +13,7 @@
 <script type="text/javascript">
 	function test(){
 		$.get("./md_java/test.md",function(data,status){
-			$("#content").html("aaaa");
+			$("#content").html(marked(data));
 		});
 	}
 </script>
