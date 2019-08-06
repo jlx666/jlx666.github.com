@@ -31,20 +31,17 @@
 	}
 	function front(){
 		var op_value =$("#selectMeanu").val();
-		/*$.get("./md_java/"+ op_value-1 +".md",function(data,status){
-			$("#content").html(marked(data));
-		});
-		$("#selectMeanu").find("option[value='" + op_value-1 +"']").attr("selected","selected");*/
-		alert(op_value);
 		op_value = op_value-1;
 		$.get("./md_java/"+ op_value +".md",function(data,status){
 			$("#content").html(marked(data));
 		});
+		$("#selectMeanu").find("option[value='" + op_value +"']").attr("selected","selected");
 
 	}
 	function next(){
 		var op_value =$("#selectMeanu").val();
-		$.get("./md_java/"+ op_value+1 +".md",function(data,status){
+		op_value = op_value+1;
+		$.get("./md_java/"+ op_value +".md",function(data,status){
 			$("#content").html(marked(data));
 		});
 	}
