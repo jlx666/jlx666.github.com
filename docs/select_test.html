@@ -5,13 +5,13 @@
 <body>
 	<div>
 		<a href="#">back</a>
-		<select id="selectMeanu">
-			<option value="1">Java类型</option>
-			<option value="2">Java方法</option>
+		<select id="selectMeanu" onchange="show_markdown()">
+			<option value="1">test1</option>
+			<option value="2">test2</option>
 		</select>
 	</div>
 	<div class="content">
-		<p id="content"></p>
+		<p id="content">sss</p>
 
 	</div>
 	<div>
@@ -21,11 +21,13 @@
 </body>
 
 <script type="text/javascript">
+	// function show_markdown(){
+	// 	$.get("./md_java/test.md",function(data,status){
+	// 		$("#content").html(marked(data));
+	// 	});
+	// }
 	function show_markdown(){
-		var op_value = $("#selectMeanu").val();
-		$.get("./md_java/"+ op_value +".md",function(data,status){
-			$("#content").html(marked(data));
-		});
+		$("#content").html($("#selectMeanu").val())
 	}
 </script>
 </html>
