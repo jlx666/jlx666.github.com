@@ -6,15 +6,14 @@
 <body>
 <p>jlx</p>
 
-<p id="content"></p>
+<p id="content">sss</p>
 <button onclick="test()">test</button>
 </body>
 
 <script type="text/javascript">
 	function test(){
 		$.get("./md_java/test.md",function(data,status){
-			if(status){$.("#content").html("marked(data)");}
-			else{alert("aaaaa")}
+			$("#content").html("aaaa");
 		});
 	}
 </script>
