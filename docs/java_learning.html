@@ -31,20 +31,22 @@
 	}
 	function front(){
 		var op_value =$("#selectMeanu").val();
-		op_value = op_value-1;
-		$.get("./md_java/"+ op_value +".md",function(data,status){
+		var new_op_value = op_value-1;
+		$.get("./md_java/"+ new_op_value +".md",function(data,status){
 			$("#content").html(marked(data));
 		});
-		$("#selectMeanu").find("option[value='" + op_value +"']").attr("selected","selected");
-
+		$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected","selected");
+		$("#selectMeanu").find("option[value='" + op_value +"']").removeAttr("selected");
 	}
 	function next(){
 		var op_value =$("#selectMeanu").val();
-		op_value = op_value- (-1);
-		$.get("./md_java/"+ op_value +".md",function(data,status){
+		var new_op_value = op_value- (-1);
+		$.get("./md_java/"+ new_op_value +".md",function(data,status){
 			$("#content").html(marked(data));
 		});
-		$("#selectMeanu").find("option[value='" + op_value +"']").attr("selected","selected");
+		$("#selectMeanu").find("option[value='" + new_op_value +"']").attr("selected","selected");
+		$("#selectMeanu").find("option[value='" + op_value +"']").removeAtrr("selected");
+		
 	}
 </script>
 </html>
