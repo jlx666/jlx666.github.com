@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="./js/test.js"></script>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<body>
+<p>jlx</p>
+
+<button onclick="test()">test</button>
+</body>
+
+<script type="text/javascript">
+	function test(){
+		$.get("test.html",function(data,status){
+			alert("hahahaha");
+		});
+	}
+</script>
+</html>
