@@ -12,7 +12,7 @@
 <script type="text/javascript">
 	function test(){
 		$.get("./md_java/test.md",function(data,status){
-			$("#content").html(marked("# Marked in the browser\n\nRendered by **marked**."));
+			$("#content").html(marked("# Marked in the browser\n\nRendered by **marked**." + data));
 		});
 	}
 </script>
