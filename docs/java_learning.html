@@ -25,7 +25,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$.get("./md_java/1.md",function(data,status){
-			$("#content").html(marked(data));
+			$("#content").html(marked(data));	
 		});
 		$("#selectMeanu").find("option[value=1]").attr("selected","selected");
 	})
